@@ -31,7 +31,12 @@ public:
                     else if(temp_array[index] == numbers[j] && return_j == -1)
                         return_j = index + 1;
                 }
-               return (return_i < return_j) ? {return_i,return_j} : {return_j,return_i};
+                //return return_i < return_j ? {return_i,return_j} : {return_j,return_i}; 为什么这个不对？
+                if(return_i < return_j){
+                    return {return_i,return_j};
+                }
+                else if(return_i > return_j)
+                    return {return_j,return_i};
             }
         }
         return {0,0};

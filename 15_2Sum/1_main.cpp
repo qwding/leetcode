@@ -20,14 +20,11 @@ public:
         	num_map[num[i]] = i;
     	}
     	for(int i = 0; i < size ; ++i){
-    		unordered_map<int, int> flag_map;
     		for(int j = i + 1; j < size; ++j){
     			unordered_map<int, int>::iterator iter;
     			iter = num_map.find((num[i] + num[j])*-1);
-    			if(iter != num_map.end() && iter -> second > j && flag_map.find(num[j]) == flag_map.end() && flag_map.find(iter->second) == flag_map.end() ){
+    			if(iter != num_map.end() && iter -> second > j ){
     				result.push_back({num[i],num[j],iter -> first});
-    				flag_map[num[j]] = j;
-    				flag_map[num[iter -> second]] = iter -> first;
     				printf("value is :%d %d %d\n",num[i],num[j],iter -> first);
     				//printf("key is :%d %d %d\n",i,j,iter -> second);
     			}

@@ -42,7 +42,10 @@ public:
         return {0,0};
     }
 };
-
+/*
+    http://blog.csdn.net/yutianzuijin/article/details/11499917/这个讲了迭代，这次编写总结几个问题，关于++a和a++与？：关系。
+    ？之前的判断
+*/
 
 int main()
 {

@@ -5,7 +5,6 @@ public class Solution {
 		int resource = x;
 		long first_result = 0;
 		while(x != 0){
-			//int temp = 
 			first_result = first_result * 10 + x % 10;;
 			x = x / 10;
 		}
